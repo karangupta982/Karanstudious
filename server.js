@@ -10,9 +10,9 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(bodyParser.json());
 
-// Nodemailer configuration
+
 const transporter = nodemailer.createTransport({
-    service: 'gmail', // or any other email service you prefer
+    service: 'gmail', 
     auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
@@ -24,7 +24,7 @@ app.post('/send-email', (req, res) => {
 
     const mailOptions = {
         from: email,
-        to: process.env.EMAIL_USER, // Change this to your email address
+        to: process.env.EMAIL_USER, 
         subject: 'New Contact Form Submission',
         text: `You have received a new message from ${firstname} ${lastname} \n(${email}):\n\n${message}`,
     };
@@ -43,5 +43,5 @@ app.listen(PORT, () => {
 });
 
 app.get('/', (req, res) => {
-    res.send("backend homepage"); // Serve your home page
+    res.send("backend homepage"); 
 });
