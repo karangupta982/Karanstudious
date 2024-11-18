@@ -8,4 +8,4 @@ The frontend code is available at: [KaranStudious Frontend](https://github.com/k
 
 ## Live Project
 Visit the live application at: [KaranStudious](https://karanstudious.netlify.app/)
-)
+
